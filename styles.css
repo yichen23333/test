@@ -1,0 +1,1178 @@
+/* 基础样式和变量定义 */
+:root {
+    --primary-color: #fdd6d6; /* 抹茶色 */
+    --secondary-color: #EC4899; /* 粉色 */
+    --dark-color: #1E293B;
+    --light-color: #F8FAFC;
+    --accent-color: #0EA5E9; /* 蓝色 */
+    --food-color: #F97316; /* 橙色 */
+    --game-color: var(--primary-color);
+    --art-color: var(--secondary-color);
+    --music-color: var(--accent-color);
+    --food-tag-color: #8B5CF6; /* 紫色 */
+    
+    --font-family: 'Inter', system-ui, sans-serif;
+    --border-radius: 0.75rem;
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+/* 基础样式 */
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, #c5ebd3 0%, #e4faf2 100%);
+    color: var(--dark-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 装饰元素 */
+.decor-circle {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.decor-1 {
+    top: -5rem;
+    right: -5rem;
+    width: 16rem;
+    height: 16rem;
+    background-color: rgba(116, 204, 22, 0.1);
+}
+
+.decor-2 {
+    bottom: -8rem;
+    left: -8rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: rgba(236, 72, 153, 0.1);
+}
+
+.decor-3 {
+    top: 25%;
+    left: -4rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: rgba(14, 165, 233, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.decor-4 {
+    bottom: 33%;
+    right: -3rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: rgba(116, 204, 22, 0.1);
+    animation: float 6s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 页眉样式 */
+.site-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--dark-color);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.025em;
+}
+
+.main-nav {
+    display: none;
+}
+
+.main-nav a {
+    color: var(--dark-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: var(--transition);
+}
+
+.main-nav a:hover {
+    color: var(--secondary-color);
+}
+
+.main-nav a:first-child {
+    color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+}
+
+.mobile-menu.show {
+    display: block;
+}
+
+.mobile-menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu a {
+    padding: 0.5rem 0;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.mobile-menu a:hover {
+    color: var(--secondary-color);
+}
+
+/* 主要内容容器 */
+.main-content-container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 边栏样式 */
+.sidebar {
+    display: none;
+}
+
+.sidebar-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    padding: 1rem;
+    position: sticky;
+    top: 6rem;
+}
+
+.sidebar-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(116, 204, 22, 0.3);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.sidebar-nav a:hover {
+    background-color: rgba(116, 204, 22, 0.1);
+    color: var(--primary-color);
+}
+
+.sidebar-nav a.active {
+    background-color: rgba(116, 204, 22, 0.1);
+    color: var(--primary-color);
+}
+
+.sidebar-nav i {
+    margin-right: 0.5rem;
+    width: 1.25rem;
+    text-align: center;
+}
+
+.about-me {
+    margin-top: 1.5rem;
+}
+
+.about-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.avatar-container {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px solid rgba(116, 204, 22, 0.2);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-description {
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #6B7280;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* 主体内容样式 */
+.main-content {
+    flex: 1;
+}
+
+/* 个人简介部分 */
+.profile-section {
+    margin-bottom: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.profile-section:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-image-container {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.profile-image {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 4px solid rgba(116, 204, 22, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+.profile-details {
+    width: 100%;
+}
+
+.profile-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile-description {
+    color: #4B5563;
+    margin-bottom: 1rem;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.tag-game {
+    background-color: rgba(116, 204, 22, 0.1);
+    color: var(--game-color);
+}
+
+.tag-art {
+    background-color: rgba(236, 72, 153, 0.1);
+    color: var(--art-color);
+}
+
+.tag-music {
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--music-color);
+}
+
+.tag-food {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: var(--food-tag-color);
+}
+
+/* 兴趣概览网格 */
+.interests-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.interest-card {
+    text-decoration: none;
+}
+
+.card-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.interest-card:hover .card-content {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-0.25rem);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.bg-game {
+    background-color: rgba(116, 204, 22, 0.1);
+    color: var(--game-color);
+}
+
+.bg-art {
+    background-color: rgba(236, 72, 153, 0.1);
+    color: var(--art-color);
+}
+
+.bg-music {
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--music-color);
+}
+
+.bg-food {
+    background-color: rgba(249, 115, 22, 0.1);
+    color: var(--food-color);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card-description {
+    color: #4B5563;
+    margin-bottom: 1rem;
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.interest-card:hover .card-link {
+    transform: translateX(0.25rem);
+}
+
+.card-link i {
+    margin-left: 0.5rem;
+}
+
+/* 最近更新部分 */
+.updates-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+    transition: var(--transition);
+}
+
+.updates-section:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.updates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.update-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.update-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.update-content {
+    flex: 1;
+}
+
+.update-title {
+    font-weight: 600;
+}
+
+.update-description {
+    color: #4B5563;
+}
+
+.update-date {
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-top: 0.25rem;
+}
+
+/* 页脚样式 */
+.site-footer {
+    background-color: rgba(30, 41, 59, 0.9);
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-column {
+    margin-bottom: 1rem;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    color: #9CA3AF;
+    margin-bottom: 1rem;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-links a {
+    color: #9CA3AF;
+    font-size: 1.25rem;
+    transition: var(--transition);
+}
+
+.footer-social-links a:hover {
+    color: white;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid #374151;
+    background-color: #1F2937;
+    padding: 0.5rem 0.75rem;
+    color: white;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(116, 204, 22, 0.5);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #6B7280;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: #65B815;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #374151;
+    color: #9CA3AF;
+    font-size: 0.875rem;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+    .main-nav {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .profile-container {
+        flex-direction: row;
+    }
+    
+    .profile-image-container {
+        width: 25%;
+        margin-bottom: 0;
+    }
+    
+    .profile-details {
+        width: 75%;
+        padding-left: 2rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-content-container {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    .sidebar {
+        display: block;
+        width: 16rem;
+        padding-right: 1.5rem;
+    }
+    
+    .main-content {
+        flex: 1;
+    }
+}
+/* ==================== 音乐页面特定样式 ==================== */
+
+/* 音乐统计 */
+.music-stats {
+    margin-top: 1.5rem;
+}
+
+.stats-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item {
+    margin-bottom: 1rem;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-weight: 500;
+}
+
+.stat-bar {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 0.5rem;
+}
+
+.stat-progress {
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 9999px;
+}
+
+/* 音乐类型卡片 */
+.music-types {
+    margin-bottom: 2.5rem;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.type-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.type-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-lg);
+}
+
+.type-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.bg-music {
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--accent-color);
+}
+
+.bg-electronic {
+    background-color: rgba(236, 72, 153, 0.1);
+    color: var(--secondary-color);
+}
+
+.bg-rock {
+    background-color: rgba(116, 204, 22, 0.1);
+    color: var(--primary-color);
+}
+
+.bg-classical {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: #8B5CF6;
+}
+
+.type-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.type-count {
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+/* 专辑卡片 */
+.favorite-albums {
+    margin-bottom: 2.5rem;
+}
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+.album-card {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.album-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.album-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.album-card:hover .album-overlay {
+    opacity: 1;
+}
+
+.album-card:hover .album-cover {
+    transform: scale(1.05);
+}
+
+.album-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.album-artist {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.album-tags {
+    display: flex;
+    align-items: center;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+}
+
+.tag-pop {
+    background-color: var(--secondary-color);
+}
+
+.tag-electronic {
+    background-color: var(--accent-color);
+}
+
+.tag-rock {
+    background-color: var(--primary-color);
+}
+
+.tag-classical {
+    background-color: #8B5CF6;
+}
+
+.tag-folk {
+    background-color: #10B981;
+}
+
+.album-year {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* 单曲列表 */
+.tracks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9fafb;
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
+    transition: var(--transition);
+}
+
+.track-item:hover {
+    background-color: #f3f4f6;
+    transform: translateX(0.25rem);
+}
+
+.track-cover {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.track-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.track-info {
+    flex: 1;
+}
+
+.track-title {
+    font-weight: 500;
+}
+
+.track-artist {
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+.track-controls {
+    display: flex;
+    align-items: center;
+}
+
+.track-duration {
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-right: 1rem;
+}
+
+.play-button {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.play-button:hover {
+    color: #0c94d1;
+}
+
+/* 音乐播放习惯 */
+.music-habits {
+    margin-bottom: 2.5rem;
+}
+
+.habits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.habits-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.habits-subtitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.time-chart {
+    height: 20rem;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.25rem;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.time-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.time-bar {
+    background-color: var(--accent-color);
+    opacity: 0.7;
+    border-radius: 0.25rem 0.25rem 0 0;
+    transition: height 0.3s ease;
+}
+
+.time-label {
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.time-note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-top: 0.5rem;
+}
+
+.type-chart {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie-chart {
+    width: 16rem;
+    height: 16rem;
+    position: relative;
+}
+
+.pie-base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+}
+
+.pie-segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip: rect(0, 8rem, 16rem, 8rem);
+}
+
+.segment-pop {
+    background-color: var(--secondary-color);
+    transform: rotate(45deg);
+}
+
+.segment-electronic {
+    background-color: var(--accent-color);
+    transform: rotate(100deg);
+}
+
+.segment-rock {
+    background-color: var(--primary-color);
+    transform: rotate(190deg);
+}
+
+.segment-classical {
+    background-color: #8B5CF6;
+    transform: rotate(250deg);
+}
+
+.pie-center {
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    background-color: white;
+    border-radius: 50%;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.pie-label {
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+.chart-legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.legend-color {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.color-pop {
+    background-color: var(--secondary-color);
+}
+
+.color-electronic {
+    background-color: var(--accent-color);
+}
+
+.color-rock {
+    background-color: var(--primary-color);
+}
+
+.color-classical {
+    background-color: #8B5CF6;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+    .types-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .albums-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .habits-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .albums-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* 音频播放器样式 */
+#audioPlayer {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    max-width: 300px;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 当前播放的曲目标记 */
+.current-playing {
+    background-color: rgba(14, 165, 233, 0.1) !important;
+    border-left: 3px solid var(--accent-color);
+}
+
+/* 播放按钮悬停效果 */
+.play-button:hover {
+    transform: scale(1.1);
+}
