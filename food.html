@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喜欢的食物 - 我的个人空间</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-light text-dark min-h-screen flex flex-col">
+    <!-- 页眉区 -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="site-title">我的个人空间</h1>
+            <nav class="main-nav">
+                <a href="index.html">首页</a>
+                <a href="games.html">喜欢的游戏</a>
+                <a href="artworks.html">绘画作品</a>
+                <a href="music.html">喜欢的音乐</a>
+                <a href="food.html" class="active">喜欢的食物</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="menuToggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-container">
+                <a href="index.html">首页</a>
+                <a href="games.html">喜欢的游戏</a>
+                <a href="artworks.html">绘画作品</a>
+                <a href="music.html">喜欢的音乐</a>
+                <a href="food.html" class="active">喜欢的食物</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content-container">
+        <!-- 边栏导航区 -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h2 class="sidebar-title">内容导航</h2>
+                <nav class="sidebar-nav">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                    <a href="games.html">
+                        <i class="fa fa-gamepad"></i>喜欢的游戏
+                    </a>
+                    <a href="artworks.html">
+                        <i class="fa fa-paint-brush"></i>绘画作品
+                    </a>
+                    <a href="music.html">
+                        <i class="fa fa-music"></i>喜欢的音乐
+                    </a>
+                    <a href="food.html" class="active">
+                        <i class="fa fa-cutlery"></i>喜欢的食物
+                    </a>
+                </nav>
+                <div class="music-stats">
+                    <h3 class="stats-title">食物统计</h3>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>最喜欢的菜系</span>
+                                <span class="stat-value">川菜</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>每周外出就餐次数</span>
+                                <span class="stat-value">3次</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>收藏的食谱</span>
+                                <span class="stat-value">42道</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主体内容区 -->
+        <main class="main-content">
+            <!-- 喜欢的食物 -->
+            <section class="music-section">
+                <h2 class="section-title">
+                    <i class="fa fa-cutlery"></i>喜欢的食物
+                </h2>
+                <p class="section-description">食物是生活中不可或缺的乐趣，以下是我喜欢的一些美食和烹饪作品，以及一个简单的食物偏好调查表单。</p>
+                
+                <!-- 食物类型 -->
+                <div class="game-types">
+                    <h3 class="subsection-title">喜欢的食物类型</h3>
+                    <div class="types-grid">
+                        <div class="type-card">
+                            <div class="type-icon bg-rpg">
+                                <i class="fa fa-bars"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">川菜</h4>
+                                <p class="type-count">18道</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-action">
+                                <i class="fa fa-apple"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">甜点</h4>
+                                <p class="type-count">12道</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-strategy">
+                                <i class="fa fa-coffee"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">饮品</h4>
+                                <p class="type-count">10种</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-sports">
+                                <i class="fa fa-font-awesome"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">海鲜</h4>
+                                <p class="type-count">8种</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 最喜欢的食物 -->
+                <div class="favorite-games">
+                    <h3 class="subsection-title">近期喜爱的美食</h3>
+                    <div class="albums-grid">
+                        <div class="album-card">
+                            <img src="images/f1.jpg" alt="舒芙蕾" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">舒芙蕾</h4>
+                                <p class="album-artist">甜点</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-rpg">点心</span>
+                                    <span class="album-year">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/f2.jpg" alt="火锅" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">火锅</h4>
+                                <p class="album-artist">贵州酸汤火锅</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-action">火锅</span>
+                                    <span class="album-year">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/f3.jpg" alt="争渡争渡" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">争渡争渡</h4>
+                                <p class="album-artist">古德墨柠</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-strategy">奶茶</span>
+                                    <span class="album-year">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 食物偏好调查表单 -->
+                <div class="favorite-tracks">
+                    <h3 class="subsection-title">食物偏好调查</h3>
+                    <div class="tracks-list">
+                        <form action="#" method="post" class="food-form" id="foodForm">
+                            <div class="form-row">
+                                <label for="name" class="form-label">你的名字</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="请输入你的名字" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <label for="email" class="form-label">电子邮箱</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="请输入你的邮箱" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <label class="form-label">你最喜欢的菜系</label>
+                                <div class="form-radio-group">
+                                    <label class="form-radio-label">
+                                        <input type="radio" name="cuisine" value="chinese" checked required> 中餐
+                                    </label>
+                                    <label class="form-radio-label">
+                                        <input type="radio" name="cuisine" value="western"> 西餐
+                                    </label>
+                                    <label class="form-radio-label">
+                                        <input type="radio" name="cuisine" value="japanese"> 日料
+                                    </label>
+                                    <label class="form-radio-label">
+                                        <input type="radio" name="cuisine" value="korean"> 韩料
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <label class="form-label">你喜欢的食物类型 (可多选)</label>
+                                <div class="form-checkbox-group">
+                                    <label class="form-checkbox-label">
+                                        <input type="checkbox" name="foodTypes" value="spicy"> 辛辣
+                                    </label>
+                                    <label class="form-checkbox-label">
+                                        <input type="checkbox" name="foodTypes" value="sweet"> 甜味
+                                    </label>
+                                    <label class="form-checkbox-label">
+                                        <input type="checkbox" name="foodTypes" value="salty"> 咸味
+                                    </label>
+                                    <label class="form-checkbox-label">
+                                        <input type="checkbox" name="foodTypes" value="sour"> 酸味
+                                    </label>
+                                    <label class="form-checkbox-label">
+                                        <input type="checkbox" name="foodTypes" value="bitter"> 苦味
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <label for="favFood" class="form-label">你最喜欢的一道菜</label>
+                                <input type="text" id="favFood" name="favFood" class="form-input" placeholder="例如：麻婆豆腐" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <label for="foodComment" class="form-label">对食物的看法或建议</label>
+                                <textarea id="foodComment" name="foodComment" rows="4" class="form-textarea" placeholder="请分享你对食物的看法..."></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <label for="foodRating" class="form-label">你对美食的热爱程度</label>
+                                <input type="range" id="foodRating" name="foodRating" min="1" max="10" value="7" class="form-range">
+                                <span class="form-range-value" id="ratingValue">7</span>
+                            </div>
+                            
+                            <div class="form-row">
+                                <label for="birthDate" class="form-label">你的生日</label>
+                                <input type="date" id="birthDate" name="birthDate" class="form-input">
+                            </div>
+                            
+                            <div class="form-row">
+                                <label for="foodType" class="form-label">你想了解的食物类型</label>
+                                <select id="foodType" name="foodType" class="form-select">
+                                    <option value="">请选择</option>
+                                    <option value="chinese">中餐菜系</option>
+                                    <option value="dessert">甜点制作</option>
+                                    <option value="drink">饮品配方</option>
+                                    <option value="seafood">海鲜做法</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-row">
+                                <label class="form-label">是否愿意接收美食资讯</label>
+                                <label class="form-radio-label">
+                                    <input type="radio" name="newsletter" value="yes" checked required> 是
+                                </label>
+                                <label class="form-radio-label">
+                                    <input type="radio" name="newsletter" value="no"> 否
+                                </label>
+                            </div>
+                            
+                            <div class="form-row">
+                                <button type="submit" class="submit-btn">
+                                    <i class="fa fa-paper-plane"></i> 提交调查
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 提交成功弹窗 -->
+    <div class="success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa fa-check-circle"></i>
+            </div>
+            <h3 class="modal-title">提交成功</h3>
+            <p class="modal-message">感谢你的参与！你的反馈已成功提交。</p>
+            <button class="modal-close" id="closeModal">
+                确定
+            </button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">关于我</h3>
+                <p class="footer-text">这是一个展示我个人兴趣爱好的网页，记录了我在游戏、音乐、绘画等方面的喜好，希望你能在这里了解更多关于我的信息。</p>
+                <div class="footer-social-links">
+                    <a href="#"><i class="fa fa-weibo"></i></a>
+                    <a href="#"><i class="fa fa-wechat"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="games.html">喜欢的游戏</a></li>
+                    <li><a href="artworks.html">绘画作品</a></li>
+                    <li><a href="music.html">喜欢的音乐</a></li>
+                    <li><a href="food.html">喜欢的食物</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">联系我</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" placeholder="你的名字">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" placeholder="你的邮箱">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" rows="3" placeholder="你的留言"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="submit-btn">
+                            发送消息
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 我的个人空间. 保留所有权利.</p>
+        </div>
+    </footer>
+
+   <script>
+    // 移动端菜单切换
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('show');
+    });
+    
+    // 页面滚动效果
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            // 关闭移动菜单（如果打开）
+            document.getElementById('mobileMenu').classList.remove('show');
+            
+            // 滚动到目标位置
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // 范围输入值显示
+    const rangeInput = document.getElementById('foodRating');
+    const ratingValue = document.getElementById('ratingValue');
+    if (rangeInput && ratingValue) {
+        rangeInput.addEventListener('input', function() {
+            ratingValue.textContent = this.value;
+        });
+    }
+    
+    // 表单提交成功弹窗
+    const foodForm = document.getElementById('foodForm');
+    const successModal = document.getElementById('successModal');
+    const closeModal = document.getElementById('closeModal');
+    
+    if (foodForm && successModal && closeModal) {
+        foodForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // 阻止表单实际提交，仅演示弹窗效果
+            
+            // 显示成功弹窗
+            successModal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+        });
+        
+        closeModal.addEventListener('click', function() {
+            successModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // 恢复背景滚动
+            foodForm.reset(); // 重置表单
+        });
+        
+        // 点击弹窗外部关闭弹窗
+        successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+                successModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                foodForm.reset();
+            }
+        });
+    }
+</script>
+</body>
+</html>

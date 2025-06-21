@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喜欢的游戏 - 我的个人空间</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 装饰元素 -->
+    <div class="decor-circle decor-1"></div>
+    <div class="decor-circle decor-2"></div>
+    <div class="decor-circle decor-3"></div>
+    <div class="decor-circle decor-4"></div>
+
+    <!-- 页眉区 -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="site-title">我的个人空间</h1>
+            <nav class="main-nav">
+                <a href="index.html">首页</a>
+                <a href="games.html" class="active">喜欢的游戏</a>
+                <a href="artworks.html">绘画作品</a>
+                <a href="music.html">喜欢的音乐</a>
+                <a href="food.html">喜欢的食物</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="menuToggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-container">
+                <a href="index.html">首页</a>
+                <a href="games.html" class="active">喜欢的游戏</a>
+                <a href="artworks.html">绘画作品</a>
+                <a href="music.html">喜欢的音乐</a>
+                <a href="food.html">喜欢的食物</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content-container">
+        <!-- 边栏导航区 -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h2 class="sidebar-title">内容导航</h2>
+                <nav class="sidebar-nav">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                    <a href="games.html" class="active">
+                        <i class="fa fa-gamepad"></i>喜欢的游戏
+                    </a>
+                    <a href="artworks.html">
+                        <i class="fa fa-paint-brush"></i>绘画作品
+                    </a>
+                    <a href="music.html">
+                        <i class="fa fa-music"></i>喜欢的音乐
+                    </a>
+                    <a href="food.html">
+                        <i class="fa fa-cutlery"></i>喜欢的食物
+                    </a>
+                </nav>
+                <div class="music-stats">
+                    <h3 class="stats-title">游戏统计</h3>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>最喜欢的类型</span>
+                                <span class="stat-value">角色扮演</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>每周游戏时间</span>
+                                <span class="stat-value">15小时</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>收藏游戏</span>
+                                <span class="stat-value">76款</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主体内容区 -->
+        <main class="main-content">
+            <!-- 喜欢的游戏 -->
+            <section class="music-section">
+                <h2 class="section-title">
+                    <i class="fa fa-gamepad"></i>喜欢的游戏
+                </h2>
+                <p class="section-description">游戏是我放松和享受生活的重要方式，不同类型的游戏能带给我不同的体验和乐趣。以下是我最喜欢的游戏类型、游戏作品和相关统计：</p>
+                
+                <!-- 游戏类型 -->
+                <div class="game-types">
+                    <h3 class="subsection-title">游戏类型</h3>
+                    <div class="types-grid">
+                        <div class="type-card">
+                            <div class="type-icon bg-rpg">
+                                <i class="fa fa-user-secret"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">角色扮演</h4>
+                                <p class="type-count">32款</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-action">
+                              <i class="fa fa-thumbs-up"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">动作冒险</h4>
+                                <p class="type-count">18款</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-action">
+                                <i class="fa-solid fa-font-awesome"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">策略游戏</h4>
+                                <p class="type-count">12款</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-sports">
+                                <i class="fa fa-futbol-o"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">TPS游戏</h4>
+                                <p class="type-count">1款</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 最喜欢的游戏 -->
+                <div class="favorite-games">
+                    <h3 class="subsection-title">最喜欢的游戏</h3>
+                    <div class="albums-grid">
+                        <div class="album-card">
+                            <img src="images/5.png" alt="游戏封面1" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">splatoon3</h4>
+                                <p class="album-artist">任天堂</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-rpg">第三人称射击</span>
+                                    <span class="album-year">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/6.png" alt="游戏封面2" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">火焰纹章：风花雪月</h4>
+                                <p class="album-artist">任天堂、 Intelligent Systems</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-action">战旗</span>
+                                    <span class="album-year">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/7.png" alt="游戏封面3" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">宝可梦：朱紫</h4>
+                                <p class="album-artist">Game Freak</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-strategy">RPG</span>
+                                    <span class="album-year">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/8.jpg" alt="游戏封面4" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">Fate/Samurai Remnant</h4>
+                                <p class="album-artist">光荣</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-sports">ARPG</span>
+                                    <span class="album-year">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/10.png" alt="游戏封面5" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">大逆转裁判</h4>
+                                <p class="album-artist">CAPCOM</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-strategy">文字推理游戏</span>
+                                    <span class="album-year">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/9.png" alt="游戏封面6" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">动物森友会</h4>
+                                <p class="album-artist">任天堂</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-rpg">模拟经营</span>
+                                    <span class="album-year">2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 游戏表格 -->
+                <div class="favorite-tracks">
+                    <h3 class="subsection-title">我的游戏收藏表格</h3>
+                    <div class="tracks-list">
+                        <table class="game-table">
+                            <thead>
+                                <tr>
+                                    <th>游戏封面</th>
+                                    <th>游戏名称</th>
+                                    <th>游戏类型</th>
+                                    <th>发行时间</th>
+                                    <th>游戏平台</th>
+                                    <th>游戏时长</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="images/5.png" alt="游戏封面1"></td>
+                                    <td>splatoon3</td>
+                                    <td>TPS游戏</td>
+                                    <td>2022-09-09</td>
+                                    <td>Switch</td>
+                                    <td>120+小时</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/6.png" alt="游戏封面2"></td>
+                                    <td>火焰纹章：风花雪月</td>
+                                    <td>战旗</td>
+                                    <td>2019-07-26</td>
+                                    <td>Switch</td>
+                                    <td>80+小时</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/7.png" alt="游戏封面3"></td>
+                                    <td>宝可梦：朱紫</td>
+                                    <td>RPG</td>
+                                    <td>2022-11-18</td>
+                                    <td>Switch</td>
+                                    <td>80+小时</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/8.jpg" alt="游戏封面4"></td>
+                                    <td>Fate/Samurai Remnant</td>
+                                    <td>ARPG</td>
+                                    <td>2023-09-28</td>
+                                    <td>PC/PS5/Xbox/Switch</td>
+                                    <td>50+小时</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/9.png" alt="游戏封面5"></td>
+                                    <td>大逆转裁判</td>
+                                    <td>推理游戏</td>
+                                    <td>2021-01-18</td>
+                                    <td>PC</td>
+                                    <td>90+小时</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/10.png" alt="游戏封面6"></td>
+                                    <td>动物森友会</td>
+                                    <td>模拟经营</td>
+                                    <td>2020-03-20</td>
+                                    <td>Switch</td>
+                                    <td>30+小时</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 页脚区 - 垂直三列布局 -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                    <h3 class="footer-title">关于我</h3>
+                    <p class="footer-text">这是一个展示我个人兴趣爱好的网页，记录了我在游戏、音乐、绘画等方面的喜好，希望你能在这里了解更多关于我的信息。</p>
+                    <div class="footer-social-links">
+                        <a href="#" class="social-link"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="social-link"><i class="fa fa-wechat"></i></a>
+                        <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">首页</a></li>
+                        <li><a href="games.html" class="footer-link active">喜欢的游戏</a></li>
+                        <li><a href="artworks.html" class="footer-link">绘画作品</a></li>
+                        <li><a href="music.html" class="footer-link">喜欢的音乐</a></li>
+                        <li><a href="food.html" class="footer-link">喜欢的食物</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">联系我</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="contact-name" placeholder="你的名字">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="contact-email" placeholder="你的邮箱">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contact-message" rows="3" placeholder="你的留言"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="submit-btn">
+                                发送消息
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+
+   <script>
+    // 移动端菜单切换
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('show');
+    });
+    
+    // 页面滚动效果
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            // 关闭移动菜单（如果打开）
+            document.getElementById('mobileMenu').classList.remove('show');
+            
+            // 滚动到目标位置
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

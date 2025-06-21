@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喜欢的音乐 - 我的个人空间</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <audio id="audioPlayer"></audio>
+    <!-- 装饰元素 -->
+    <div class="decor-circle decor-1"></div>
+    <div class="decor-circle decor-2"></div>
+    <div class="decor-circle decor-3"></div>
+    <div class="decor-circle decor-4"></div>
+
+    <!-- 页眉区 -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="site-title">我的个人空间</h1>
+            <nav class="main-nav">
+                <a href="index.html">首页</a>
+                <a href="games.html">喜欢的游戏</a>
+                <a href="artworks.html">绘画作品</a>
+                <a href="music.html" class="active">喜欢的音乐</a>
+                <a href="food.html">喜欢的食物</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="menuToggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-container">
+                <a href="index.html">首页</a>
+                <a href="games.html">喜欢的游戏</a>
+                <a href="artworks.html">绘画作品</a>
+                <a href="music.html" class="active">喜欢的音乐</a>
+                <a href="food.html">喜欢的食物</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content-container">
+        <!-- 边栏导航区 -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h2 class="sidebar-title">内容导航</h2>
+                <nav class="sidebar-nav">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                    <a href="games.html">
+                        <i class="fa fa-gamepad"></i>喜欢的游戏
+                    </a>
+                    <a href="artworks.html">
+                        <i class="fa fa-paint-brush"></i>绘画作品
+                    </a>
+                    <a href="music.html" class="active">
+                        <i class="fa fa-music"></i>喜欢的音乐
+                    </a>
+                    <a href="food.html">
+                        <i class="fa fa-cutlery"></i>喜欢的食物
+                    </a>
+                </nav>
+                <div class="music-stats">
+                    <h3 class="stats-title">音乐统计</h3>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>最喜欢的类型</span>
+                                <span class="stat-value">流行</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>播放时长</span>
+                                <span class="stat-value">每周30小时</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>收藏歌曲</span>
+                                <span class="stat-value">486首</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主体内容区 -->
+        <main class="main-content">
+            <!-- 喜欢的音乐 -->
+            <section class="music-section">
+                <h2 class="section-title">
+                    <i class="fa fa-music"></i>喜欢的音乐
+                </h2>
+                <p class="section-description">音乐是我生活中不可或缺的一部分，它能带给我快乐、放松和灵感。以下是我最喜欢的音乐类型和专辑：</p>
+                
+                <!-- 音乐类型 -->
+                <div class="music-types">
+                    <h3 class="subsection-title">音乐类型</h3>
+                    <div class="types-grid">
+                        <div class="type-card">
+                            <div class="type-icon bg-music">
+                                <i class="fa fa-music"></i>
+                            </div>
+                            <h4 class="type-name">流行</h4>
+                            <p class="type-count">184首</p>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-electronic">
+                                <i class="fa fa-headphones"></i>
+                            </div>
+                            <h4 class="type-name">电子</h4>
+                            <p class="type-count">126首</p>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-rock">
+                                <i class="fa fa-music"></i>
+                            </div>
+                            <h4 class="type-name">摇滚</h4>
+                            <p class="type-count">92首</p>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-classical">
+                                <i class="fa fa-headphones"></i>
+                            </div>
+                            <h4 class="type-name">古典</h4>
+                            <p class="type-count">84首</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 最喜欢的专辑 -->
+                <div class="favorite-albums">
+                    <h3 class="subsection-title">最喜欢的专辑</h3>
+                    <div class="albums-grid">
+                        <div class="album-card">
+                            <img src="images/11.jpg" alt="专辑封面1" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">私は雨</h4>
+                                <p class="album-artist">稲葉昙</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-electronic">电子</span>
+                                    <span class="album-year">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/12.jpg" alt="专辑封面2" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">匙ノ咒</h4>
+                                <p class="album-artist">r-906</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-pop">流行</span>
+                                    <span class="album-year">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/13.jpg" alt="专辑封面3" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">春岚</h4>
+                                <p class="album-artist">john</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-rock">摇滚</span>
+                                    <span class="album-year">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/14.jpg" alt="专辑封面4" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">天球のMúsica</h4>
+                                <p class="album-artist">ave mujica</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-classical">古典</span>
+                                    <span class="album-year">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/15.jpg" alt="专辑封面5" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">Call your name</h4>
+                                <p class="album-artist">泽野弘之</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-folk">摇滚</span>
+                                    <span class="album-year">2015</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/16.jpg" alt="专辑封面6" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">Non Breath Oblige</h4>
+                                <p class="album-artist">ピノキオピー</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-electronic">电子</span>
+                                    <span class="album-year">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 最喜欢的单曲 -->
+                <div class="favorite-tracks">
+                    <h3 class="subsection-title">最喜欢的单曲</h3>
+                    <div class="tracks-list">
+                        <div class="track-item">
+                            <div class="track-cover">
+                                <img src="images/3.jpg" alt="歌曲封面1" class="track-image">
+                            </div>
+                            <div class="track-info">
+                                <h4 class="track-title">Dying breath</h4>
+                                <p class="track-artist">川名唯</p>
+                            </div>
+                            <div class="track-controls">
+                                <span class="track-duration">3:58</span>
+                                <button class="play-button">
+                                    <i class="fa fa-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="track-item">
+                            <div class="track-cover">
+                                <img src="images\4.jpg" alt="歌曲封面2" class="track-image">
+                            </div>
+                            <div class="track-info">
+                                <h4 class="track-title">ルドン</h4>
+                                <p class="track-artist">川名唯</p>
+                            </div>
+                            <div class="track-controls">
+                                <span class="track-duration">3:25</span>
+                                <button class="play-button">
+                                    <i class="fa fa-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="track-item">
+                            <div class="track-cover">
+                                <img src="https://picsum.photos/seed/song3/100/100" alt="歌曲封面3" class="track-image">
+                            </div>
+                            <div class="track-info">
+                                <h4 class="track-title">Urban Nights</h4>
+                                <p class="track-artist">City Pulse</p>
+                            </div>
+                            <div class="track-controls">
+                                <span class="track-duration">3:58</span>
+                                <button class="play-button">
+                                    <i class="fa fa-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="track-item">
+                            <div class="track-cover">
+                                <img src="https://picsum.photos/seed/song4/100/100" alt="歌曲封面4" class="track-image">
+                            </div>
+                            <div class="track-info">
+                                <h4 class="track-title">Piano Sonata No. 14</h4>
+                                <p class="track-artist">Harmonic Ensemble</p>
+                            </div>
+                            <div class="track-controls">
+                                <span class="track-duration">5:23</span>
+                                <button class="play-button">
+                                    <i class="fa fa-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="track-item">
+                            <div class="track-cover">
+                                <img src="https://picsum.photos/seed/song5/100/100" alt="歌曲封面5" class="track-image">
+                            </div>
+                            <div class="track-info">
+                                <h4 class="track-title">Whispering Wind</h4>
+                                <p class="track-artist">Whispering Strings</p>
+                            </div>
+                            <div class="track-controls">
+                                <span class="track-duration">4:07</span>
+                                <button class="play-button">
+                                    <i class="fa fa-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 音乐播放习惯 -->
+            <section class="music-habits">
+                <h2 class="section-title">
+                    <i class="fa fa-bar-chart"></i>音乐播放习惯
+                </h2>
+                <p class="section-description">这是我的音乐播放习惯统计，展示了我在不同时间段和场景下的音乐偏好。</p>
+                
+                <div class="habits-grid">
+                    <div class="habits-card">
+                        <h3 class="habits-subtitle">每日播放时间</h3>
+                        <div class="time-chart">
+                            <div class="time-grid">
+                                <!-- 模拟每日24小时的播放时间分布 -->
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 10%"></div>
+                                    <div class="time-label">0</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 5%"></div>
+                                    <div class="time-label">2</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 3%"></div>
+                                    <div class="time-label">4</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 7%"></div>
+                                    <div class="time-label">6</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 35%"></div>
+                                    <div class="time-label">8</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 60%"></div>
+                                    <div class="time-label">10</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 65%"></div>
+                                    <div class="time-label">12</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 40%"></div>
+                                    <div class="time-label">14</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 75%"></div>
+                                    <div class="time-label">16</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 85%"></div>
+                                    <div class="time-label">18</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 60%"></div>
+                                    <div class="time-label">20</div>
+                                </div>
+                                <div class="time-column">
+                                    <div class="time-bar" style="height: 30%"></div>
+                                    <div class="time-label">22</div>
+                                </div>
+                            </div>
+                            <div class="time-note">
+                                高峰时段: 18:00-20:00
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="habits-card">
+                        <h3 class="habits-subtitle">音乐类型分布</h3>
+                        <div class="type-chart">
+                            <div class="pie-chart">
+                                <div class="pie-base"></div>
+                                <div class="pie-segment segment-pop"></div>
+                                <div class="pie-segment segment-electronic"></div>
+                                <div class="pie-segment segment-rock"></div>
+                                <div class="pie-segment segment-classical"></div>
+                                <div class="pie-center">
+                                    <div class="pie-number">486</div>
+                                    <div class="pie-label">收藏歌曲</div>
+                                </div>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color color-pop"></div>
+                                    <span class="legend-text">流行 (38%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color color-electronic"></div>
+                                    <span class="legend-text">电子 (26%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color color-rock"></div>
+                                    <span class="legend-text">摇滚 (19%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color color-classical"></div>
+                                    <span class="legend-text">古典 (17%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">关于我</h3>
+                <p class="footer-text">这是一个展示我个人兴趣爱好的网页，希望你能在这里了解更多关于我的信息。</p>
+                <div class="footer-social-links">
+                    <a href="#"><i class="fa fa-weibo"></i></a>
+                    <a href="#"><i class="fa fa-wechat"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="games.html">喜欢的游戏</a></li>
+                    <li><a href="artworks.html">绘画作品</a></li>
+                    <li><a href="music.html">喜欢的音乐</a></li>
+                    <li><a href="food.html">喜欢的食物</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">联系我</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" placeholder="你的名字">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" placeholder="你的邮箱">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" rows="3" placeholder="你的留言"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="submit-btn">
+                            发送消息
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 我的个人空间. 保留所有权利.</p>
+        </div>
+    </footer>
+
+   <script>
+    // 移动端菜单切换
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('show');
+    });
+    
+    // 页面滚动效果
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            // 关闭移动菜单（如果打开）
+            document.getElementById('mobileMenu').classList.remove('show');
+            
+            // 滚动到目标位置
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // 考虑到固定导航栏的高度
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // 音乐播放功能
+    document.addEventListener('DOMContentLoaded', function() {
+        const audioPlayer = document.getElementById('audioPlayer');
+        let currentPlayingButton = null;
+        
+        // 为所有播放按钮添加点击事件
+        document.querySelectorAll('.play-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const musicSrc = this.getAttribute('data-src');
+                
+                // 如果点击的是当前正在播放的按钮
+                if (this === currentPlayingButton) {
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                        this.innerHTML = '<i class="fa fa-pause-circle"></i>';
+                    } else {
+                        audioPlayer.pause();
+                        this.innerHTML = '<i class="fa fa-play-circle"></i>';
+                    }
+                } 
+                // 如果点击的是其他按钮
+                else {
+                    // 停止当前播放
+                    if (currentPlayingButton) {
+                        currentPlayingButton.innerHTML = '<i class="fa fa-play-circle"></i>';
+                    }
+                    
+                    // 设置新音频源并播放
+                    audioPlayer.src = musicSrc;
+                    audioPlayer.play();
+                    this.innerHTML = '<i class="fa fa-pause-circle"></i>';
+                    currentPlayingButton = this;
+                }
+            });
+        });
+        
+        // 当音频播放结束时恢复按钮状态
+        audioPlayer.addEventListener('ended', function() {
+            if (currentPlayingButton) {
+                currentPlayingButton.innerHTML = '<i class="fa fa-play-circle"></i>';
+                currentPlayingButton = null;
+            }
+        });
+        
+        // 更新所有播放按钮的data-src属性
+        const tracks = [
+            { cover: "images/3.jpg", title: "Dying breath", artist: "川名唯", src: "music/Dying breath.mp3", duration: "3:58" },
+            { cover: "images/4.jpg", title: "ルドン", artist: "川名唯",src: "music/ルドン.mp3", duration: "4:12" },
+            { cover: "images/11.jpg", title: "私は雨", artist: "25时", src: "music/雨.mp3", duration: "3:58" },
+            { cover: "images/17.jpg", title: "怎样都无所谓了", artist: "星街彗星", src: "music/星.mp3", duration: "1:31" },
+            { cover: "images/18.jpg", title: "mirror", artist: "Ado", src: "music/m.mp3", duration: "2:58" }
+        ];
+        
+        const trackItems = document.querySelectorAll('.track-item');
+        trackItems.forEach((item, index) => {
+            if (index < tracks.length) {
+                const track = tracks[index];
+                const playButton = item.querySelector('.play-button');
+                const trackImage = item.querySelector('.track-image');
+                const trackTitle = item.querySelector('.track-title');
+                const trackArtist = item.querySelector('.track-artist');
+                const trackDuration = item.querySelector('.track-duration');
+                
+                playButton.setAttribute('data-src', track.src);
+                trackImage.src = track.cover;
+                trackImage.alt = track.title;
+                trackTitle.textContent = track.title;
+                trackArtist.textContent = track.artist;
+                trackDuration.textContent = track.duration;
+            }
+        });
+    });
+</script>
+</body>
+</html>

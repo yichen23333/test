@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘画作品 - 我的个人空间</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-light text-dark min-h-screen flex flex-col">
+    <!-- 页眉区 -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="site-title">我的个人空间</h1>
+            <nav class="main-nav">
+                <a href="index.html">首页</a>
+                <a href="games.html">喜欢的游戏</a>
+                <a href="artworks.html" class="active">绘画作品</a>
+                <a href="music.html">喜欢的音乐</a>
+                <a href="food.html">喜欢的食物</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="menuToggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-container">
+                <a href="index.html">首页</a>
+                <a href="games.html">喜欢的游戏</a>
+                <a href="artworks.html" class="active">绘画作品</a>
+                <a href="music.html">喜欢的音乐</a>
+                <a href="food.html">喜欢的食物</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content-container">
+        <!-- 边栏导航区 -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h2 class="sidebar-title">内容导航</h2>
+                <nav class="sidebar-nav">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                    <a href="games.html">
+                        <i class="fa fa-gamepad"></i>喜欢的游戏
+                    </a>
+                    <a href="artworks.html" class="active">
+                        <i class="fa fa-paint-brush"></i>绘画作品
+                    </a>
+                    <a href="music.html">
+                        <i class="fa fa-music"></i>喜欢的音乐
+                    </a>
+                    <a href="food.html">
+                        <i class="fa fa-cutlery"></i>喜欢的食物
+                    </a>
+                </nav>
+                <div class="music-stats">
+                    <h3 class="stats-title">作品统计</h3>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>总作品数</span>
+                                <span class="stat-value">24</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>数字绘画</span>
+                                <span class="stat-value">18</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <span>传统绘画</span>
+                                <span class="stat-value">6</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-progress" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主体内容区 -->
+        <main class="main-content">
+            <!-- 绘画作品展示 -->
+            <section class="music-section">
+                <h2 class="section-title">
+                    <i class="fa fa-paint-brush"></i>绘画作品
+                </h2>
+                <p class="section-description">绘画是我表达创意和情感的方式。这里展示了我的一些作品，包括数字绘画和传统绘画。</p>
+                
+                <div class="music-types">
+                    <h3 class="subsection-title">作品类型</h3>
+                    <div class="types-grid">
+                        <div class="type-card">
+                            <div class="type-icon bg-rpg">
+                                <i class="fa fa-paint-brush"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">数字绘画</h4>
+                                <p class="type-count">18张</p>
+                            </div>
+                        </div>
+                        
+                        <div class="type-card">
+                            <div class="type-icon bg-action">
+                                <i class="fa fa-pencil"></i>
+                            </div>
+                            <div>
+                                <h4 class="type-name">传统绘画</h4>
+                                <p class="type-count">6张</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="favorite-games">
+                    <h3 class="subsection-title">作品展示</h3>
+                    <div class="albums-grid">
+                        <div class="album-card">
+                            <img src="images/d3.png" alt="数字绘画作品1" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">白白</h4>
+                                <p class="album-artist">数字绘画</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-rpg">数字艺术</span>
+                                    <span class="album-year">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/d4.png" alt="数字绘画作品2" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">黑黑</h4>
+                                <p class="album-artist">数字绘画</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-action">角色设计</span>
+                                    <span class="album-year">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/d5.jpg" alt="数字绘画作品3" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">黄黄蓝蓝</h4>
+                                <p class="album-artist">数字绘画</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-strategy">qq人</span>
+                                    <span class="album-year">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/d6.png" alt="传统绘画作品1" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">棕棕</h4>
+                                <p class="album-artist">procreate</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-sports">头像</span>
+                                    <span class="album-year">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/d7.png" alt="传统绘画作品2" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">绿绿</h4>
+                                <p class="album-artist">procreate</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-sports">头像</span>
+                                    <span class="album-year">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="album-card">
+                            <img src="images/d1.png" alt="数字绘画作品4" class="album-cover">
+                            <div class="album-overlay">
+                                <h4 class="album-title">橙灰</h4>
+                                <p class="album-artist">procreate</p>
+                                <div class="album-tags">
+                                    <span class="tag tag-rpg">插画</span>
+                                    <span class="album-year">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 绘画过程分享 (使用HTML5 video元素) -->
+            <section class="music-habits">
+                <h2 class="section-title">
+                    <i class="fa fa-film"></i>绘画过程分享
+                </h2>
+                <p class="section-description">这里展示了我的一些绘画过程。</p>
+                
+                <div class="habits-grid">
+                    <div class="habits-card">
+                        <h3 class="habits-subtitle">立绘过程</h3>
+                        <div class="video-container">
+                            <video controls poster="images/d2.jpg" width="100%">
+                                <source src="video/2.mp4" type="video/mp4">  
+                            </video>
+                        </div>
+                        <p class="video-description">30s绘画过程</p>
+                        <div class="video-meta">
+                            <span class="video-duration"><i class="fa fa-clock-o"></i> 15:32</span>
+                            <span class="video-date"><i class="fa fa-calendar"></i> 2025/03/12</span>
+                        </div>
+                    </div>
+                    
+                    <div class="habits-card">
+                        <h3 class="habits-subtitle">插画过程</h3>
+                        <div class="video-container">
+                            <video controls poster="images/d1.png" width="100%">
+                                <source src="video/1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="video-description">草稿到比较完整的插画过程（音量注意）。</p>
+                        <div class="video-meta">
+                            <span class="video-duration"><i class="fa fa-clock-o"></i> 22:45</span>
+                            <span class="video-date"><i class="fa fa-calendar"></i> 2025/04/28</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">关于我</h3>
+                <p class="footer-text">这是一个展示我个人兴趣爱好的网页，记录了我在游戏、音乐、绘画等方面的喜好，希望你能在这里了解更多关于我的信息。</p>
+                <div class="footer-social-links">
+                    <a href="#"><i class="fa fa-weibo"></i></a>
+                    <a href="#"><i class="fa fa-wechat"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="games.html">喜欢的游戏</a></li>
+                    <li><a href="artworks.html">绘画作品</a></li>
+                    <li><a href="music.html">喜欢的音乐</a></li>
+                    <li><a href="food.html">喜欢的食物</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">联系我</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" placeholder="你的名字">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" placeholder="你的邮箱">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" rows="3" placeholder="你的留言"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="submit-btn">
+                            发送消息
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </footer>
+
+   <script>
+    // 移动端菜单切换
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('show');
+    });
+    
+    // 页面滚动效果
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            // 关闭移动菜单（如果打开）
+            document.getElementById('mobileMenu').classList.remove('show');
+            
+            // 滚动到目标位置
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
